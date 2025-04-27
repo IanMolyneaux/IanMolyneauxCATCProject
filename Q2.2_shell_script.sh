@@ -2,44 +2,56 @@
 
 # Script to gather system information and write to a text file for Q2.2
 
+# Output file
 outfile="ianMolyneaux.txt"
+> "$outfile"
 
-echo "Current Date and Time:" >> "$outfile"
+# Date and Time
+echo "===== Current Date and Time =====" >> "$outfile"
 date >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Hostname:" >> "$outfile"
+# Hostname
+echo "===== Hostname =====" >> "$outfile"
 hostname >> "$outfile"
 echo "" >> "$outfile"
 
-echo "System Architecture:" >> "$outfile"
+# Architecture
+echo "===== System Architecture =====" >> "$outfile"
 arch >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Kernel and OS details:" >> "$outfile"
+# Kernal and OS details
+echo "===== Kernel and OS details =====" >> "$outfile"
 uname -a >> "$outfile"
 echo "" >> "$outfile"
 
-echo "System Uptime:" >> "$outfile"
+# System Uptime
+echo "===== System Uptime =====" >> "$outfile"
 uptime >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Current User:" >> "$outfile"
+# Current User
+echo "===== Current User =====" >> "$outfile"
 whoami >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Who is logged in:" >> "$outfile"
+# Who is logged in
+echo "===== Who is logged in =====" >> "$outfile"
 who >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Current Activity:" >> "$outfile"
+# Current Activity
+echo "===== Current Activity =====" >> "$outfile"
 w >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Table of Processes (press q to quit):" >> "$outfile"
+# Table of Processes
+echo "===== Table of Processes =====" >> "$outfile"
 top -b -n 1 >> "$outfile"
 echo "" >> "$outfile"
 
-echo "Command History:" >> "$outfile"
+# Command History
+echo "===== Command History =====" >> "$outfile"
 history >> "$outfile"
 echo "" >> "$outfile"
