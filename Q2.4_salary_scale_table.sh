@@ -25,19 +25,19 @@ echo "Is the employee a manager? (yes/no):"
 read is_manager
 
 # Getting the current year
-current_year = $(date +%Y)
+current_year=$(date +%Y)
 
 # Loop for salary scale calculation
-salary = $starting_salary
-year = $current_year
-point = 1
+salary=$starting_salary
+year=$current_year
+point=1
 
 echo "Year | Salary"
 
 while [ $point -le $number_of_points ]
 do
 	echo "$year | $salary"
-	salary = $(($salary + $salary_increment))
-	point = $(($point + 1))
-	year = $((year + 1))
+	salary=$(($salary + $salary_increment))
+	point=$(($point + 1))
+	year=$((year + 1))
 done
