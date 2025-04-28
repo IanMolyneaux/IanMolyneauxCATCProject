@@ -39,5 +39,11 @@ do
 	echo "$year | $salary"
 	salary=$(($salary + $salary_increment))
 	point=$(($point + 1))
-	year=$((year + 1))
+	if [ "$is_manager" = "yes" ]; then
+		if [ $(( ($point -1) % 2 )) -eq 0 ]; then
+			year=$(($year + 1))
+		fi
+	else
+		year=$(($year + 1))
+	fi
 done
