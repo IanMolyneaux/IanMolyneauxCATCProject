@@ -5,6 +5,11 @@
 # Date: 28/04/2025
 # Description: Generate a salary scale based on user input
 
+#Welcome message
+echo "---------------------------------------"
+echo " Welcome to the Salary Scale Generator "
+echo "---------------------------------------"
+echo
 # User input Starting salary
 echo "Enter starting salary:"
 read starting_salary
@@ -24,7 +29,7 @@ echo "Salary Increment: $salary_increment"
 echo "Is the employee a manager? (yes/no):"
 read is_manager
 
-#if "yes", double number of points
+#if "yes", double increment of salary per year
 if [ "$is_manager" = "yes" ]; then
 	number_of_points=$((number_of_points * 2))
 fi
@@ -38,12 +43,12 @@ year=$current_year
 point=1
 
 echo
-printf "%-6s | %-10s\n" "Year" "Salary"
-echo "-----------------------"
+printf "%-10s | %-15s\n" "Year" "Salary"
+echo "-------------------------------------"
 
 while [ $point -le $number_of_points ]
 do
-	printf "%-6s | %-10s\n" "$year" "$salary"
+	printf "%-10s | %-15s\n" "$year" "$salary"
 
 	# Increase salary
 	salary=$((salary + salary_increment))
@@ -60,3 +65,8 @@ do
 	# Move to next point
 	point=$((point + 1))
 done
+
+echo
+echo "--------------------------------------"
+echo " Salary scale generation completed"
+echo "--------------------------------------"
