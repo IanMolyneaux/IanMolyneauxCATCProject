@@ -24,6 +24,11 @@ echo "Salary Increment: $salary_increment"
 echo "Is the employee a manager? (yes/no):"
 read is_manager
 
+#if "yes", double number of points
+if [ "$is_manager" = "yes" ]; then
+	number_of_points=$((number_of_points * 2))
+fi
+
 # Getting the current year
 current_year=$(date +%Y)
 
@@ -32,18 +37,26 @@ salary=$starting_salary
 year=$current_year
 point=1
 
-echo "Year | Salary"
+echo
+printf "%-6s | %-10s\n" "Year" "Salary"
+echo "-----------------------"
 
 while [ $point -le $number_of_points ]
 do
-	echo "$year | $salary"
-	salary=$(($salary + $salary_increment))
-	point=$(($point + 1))
+	printf "%-6s | %-10s\n" "$year" "$salary"
+
+	# Increase salary
+	salary=$((salary + salary_increment))
+
+	# Advance year based on manager status
 	if [ "$is_manager" = "yes" ]; then
-		if [ $(( ($point -1) % 2 )) -eq 0 ]; then
-			year=$(($year + 1))
+		if [ $(( (point) % 2 )) -eq 0 ]; then
+			year=$((year + 1))
 		fi
 	else
-		year=$(($year + 1))
+		year=$((year + 1))
 	fi
+
+	# Move to next point
+	point=$((point + 1))
 done
