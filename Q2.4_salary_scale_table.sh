@@ -19,3 +19,7 @@ read salary_increment
 
 echo "Number of Points: $number_of_points"
 echo "Salary Increment: $salary_increment"
+
+#Check if employee is a Manager
+echo "Is the employee a manager? (yes/no):"
+read is_manager
