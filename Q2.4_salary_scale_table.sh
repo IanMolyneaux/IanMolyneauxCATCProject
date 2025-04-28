@@ -23,3 +23,6 @@ echo "Salary Increment: $salary_increment"
 #Check if employee is a Manager
 echo "Is the employee a manager? (yes/no):"
 read is_manager
+
+#Getting the current year
+current_year=$(date +%Y)
