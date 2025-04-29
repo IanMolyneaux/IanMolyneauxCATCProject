@@ -15,15 +15,17 @@ echo
 get_number_input() {
 	local prompt="$1"
 	local input
+
 	while true; do
 		read -p "$prompt" input
+
 		if [[ "$input" =~ ^[0-9]+$ ]]; then
+			echo "$input"
 			break
 		else
-			echo "Invalid input. Please enter a positive whole number."
+			echo "Invalid input. Please enter a positive whole number." >&2
 		fi
 	done
-	echo "$input"
 }
 
 # Get validated inputs for numeric inputs
