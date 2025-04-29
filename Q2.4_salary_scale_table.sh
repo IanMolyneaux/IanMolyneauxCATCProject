@@ -10,19 +10,33 @@ echo "---------------------------------------"
 echo " Welcome to the Salary Scale Generator "
 echo "---------------------------------------"
 echo
-# User input Starting salary
-echo "Enter starting salary:"
-read starting_salary
+
+# Input validation function for numbers
+get_number_input() {
+	local prompt="$1"
+	local input
+	while true; do
+		read -p "$prompt" input
+		if [[ "$input" =~ ^[0-9]+$ ]]; then
+			break
+		else
+			echo "Invalid input. Please enter a positive whole number."
+		fi
+	done
+	echo "$input"
+}
+
+# Get validated inputs for numeric inputs
+# User input Starting Salary
+starting_salary=$(get_number_input "Enter starting salary: ")
 echo "Starting Salary: $starting_salary"
 
-# Points on salary scale and salary increment
-echo "Enter number of points on salary scale:"
-read number_of_points
-
-echo "Enter salary increment:"
-read salary_increment
-
+# User input Salary Point
+number_of_points=$(get_number_input "Enter number of points on salary scale: ")
 echo "Number of Points: $number_of_points"
+
+# User input Salary Increment
+salary_increment=$(get_number_input "Enter salary increment: ")
 echo "Salary Increment: $salary_increment"
 
 # Check if employee is a Manager
@@ -80,7 +94,7 @@ echo
 read -p "Would you like to generate another salary scale? (yes/no): " again
 again=$(echo "$again" | tr '[:upper:]' '[:lower:]')
 
-if [[ "$again" == "yes" || "%again" == "y" ]]; then
+if [[ "$again" == "yes" || "$again" == "y" ]]; then
 	echo
 	exec "$0"
 else
