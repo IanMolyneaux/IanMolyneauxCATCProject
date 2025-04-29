@@ -27,9 +27,9 @@ again=""
 until [[ "$again" == "no" || "$again" == "n" ]] do
 
 	#Welcome message
-	echo "---------------------------------------"
+	echo "----------------------------------------"
 	echo " Welcome to the Salary Scale Generator "
-	echo "---------------------------------------"
+	echo "----------------------------------------"
 	echo
 
 	# Get validated inputs for numeric inputs
@@ -60,7 +60,7 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 
 	echo
 	printf "%-10s | %-15s\n" "Year" "Salary (€)"   
-	echo "-------------------------------------"
+	echo "----------------------------------------"
 
 	for increment_number in $(seq 1 $number_of_points)
 	do
@@ -85,13 +85,13 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 	done
 	
 	echo
-	echo "-------------------------------------------"
+	echo "----------------------------------------"
 	echo " Salary scale generation completed"
 	echo ""
 	echo " Increments applied: $number_of_points"
 	echo ""
 	echo " Final salary: €$(printf "%'.2f" $last_salary)"
-	echo "-------------------------------------------"
+	echo "----------------------------------------"
 
 	# Ask user if they want to run it again
 	echo
