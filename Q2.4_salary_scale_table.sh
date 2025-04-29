@@ -50,13 +50,6 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 	read is_manager
 	is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
 
-	# Allow for shorter input of y or n as input for yes or no
-	if [[ "$is_manager" == "y" ]]; then
-		is_manager="yes"
-	elif [[ "$is_manager" == "n" ]]; then
-		is_manager="no"
-	fi
-
 	# Getting the current year
 	current_year=$(date +%Y)
 
@@ -80,7 +73,7 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 		salary=$((salary + salary_increment))
 
 		# Advance year based on manager status
-		if [ "$is_manager" = "yes" ]; then
+		if [[ "$is_manager" == "yes" || "$is_manager" == "y" ]]; then
 			# Two increments per year
 			if [ $((increment_number % 2)) -eq 0 ]; then
 				year=$((year + 1))
