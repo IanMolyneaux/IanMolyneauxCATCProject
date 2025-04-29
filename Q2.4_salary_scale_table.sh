@@ -30,24 +30,19 @@ echo "Is the employee a manager? (yes/no):"
 read is_manager
 is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
 
-#if "yes", double increment of salary per year
-if [ "$is_manager" = "yes" ]; then
-	number_of_points=$((number_of_points * 2))
-fi
-
 # Getting the current year
 current_year=$(date +%Y)
 
 # Loop for salary scale calculation
 salary=$starting_salary
 year=$current_year
-point=1
+increment_number=1
 
 echo
 printf "%-10s | %-15s\n" "Year" "Salary"
 echo "-------------------------------------"
 
-while [ $point -le $number_of_points ]
+while [ $increment_number -le $number_of_points ]
 do
 	printf "%-10s | %-15s\n" "$year" "$salary"
 
@@ -56,15 +51,16 @@ do
 
 	# Advance year based on manager status
 	if [ "$is_manager" = "yes" ]; then
-		if [ $(( (point) % 2 )) -eq 0 ]; then
+		# Two increments per year
+		if [ $((increment_number % 2)) -eq 0 ]; then
 			year=$((year + 1))
 		fi
 	else
+		# Increment year everytime for regular employee
 		year=$((year + 1))
 	fi
 
-	# Move to next point
-	point=$((point + 1))
+	increment_number=$((increment_number + 1))
 done
 
 echo
