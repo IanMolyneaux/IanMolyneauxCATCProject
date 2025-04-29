@@ -50,6 +50,13 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 	read is_manager
 	is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
 
+	# Allow for shorter input of y or n as input for yes or no
+	if [[ "$is_manager" == "y" ]]; then
+		is_manager="yes"
+	elif [[ "$is_manager" == "n" ]]; then
+		is_manager="no"
+	fi
+
 	# Getting the current year
 	current_year=$(date +%Y)
 
