@@ -39,15 +39,17 @@ year=$current_year
 increment_number=1
 
 echo
-printf "%-10s | %-15s\n" "Year" "Salary"
+printf "%-10s | %-15s\n" "Year" "Salary (€)"   
 echo "-------------------------------------"
 
 while [ $increment_number -le $number_of_points ]
 do
-	printf "%-10s | %-15s\n" "$year" "$salary"
+	printf "%-10s | €%'14.2f\n" "$year" "$salary"
+
+	# Store last salary for final summary
+	last_salary=$salary
 
 	# Increase salary
-	last_salary=$salary
 	salary=$((salary + salary_increment))
 
 	# Advance year based on manager status
@@ -70,5 +72,5 @@ echo " Salary scale generation completed"
 echo ""
 echo " Increments applied: $number_of_points"
 echo ""
-echo " Final salary: \$$(printf "%'.2f" $last_salary)"
+echo " Final salary: €$(printf "%'.2f" $last_salary)"
 echo "-------------------------------------------"
