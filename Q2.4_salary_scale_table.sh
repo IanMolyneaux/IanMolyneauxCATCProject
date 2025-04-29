@@ -74,3 +74,16 @@ echo " Increments applied: $number_of_points"
 echo ""
 echo " Final salary: €$(printf "%'.2f" $last_salary)"
 echo "-------------------------------------------"
+
+# Loop Generator
+echo
+read -p "Would you like to generate another salary scale? (yes/no): " again
+again=$(echo "$again" | tr '[:upper:]' '[:lower:]')
+
+if [[ "$again" == "yes" || "%again" == "y" ]]; then
+	echo
+	exec "$0"
+else
+	echo "Goodbye!"
+	exit 0
+fi
