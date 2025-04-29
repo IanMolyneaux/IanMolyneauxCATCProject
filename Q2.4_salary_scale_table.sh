@@ -24,7 +24,7 @@ get_number_input() {
 
 again=""
 
-until [[ "$again" == "no" || "$again" == "n" ]] do
+until [[ "$again" == "no" || "$again" == "n" ]]; do
 
 	#Welcome message
 	echo "----------------------------------------"
@@ -97,13 +97,6 @@ until [[ "$again" == "no" || "$again" == "n" ]] do
 	echo
 	read -p "Would you like to generate another salary scale? (yes/no): " again
 	again=$(echo "$again" | tr '[:upper:]' '[:lower:]')
-
-	# Normalising input for use of y or n in place of yes or no
-	if [[ "$again" == "y" ]]; then
-		again="yes"
-	elif [[ "$again" == "n" ]]; then
-		again="no"
-	fi
 
 done
 
