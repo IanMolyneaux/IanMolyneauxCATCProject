@@ -58,7 +58,7 @@ echo
 printf "%-10s | %-15s\n" "Year" "Salary (€)"   
 echo "-------------------------------------"
 
-while [ $increment_number -le $number_of_points ]
+for increment_number in $(seq 1 $number_of_points)
 do
 	printf "%-10s | €%'14.2f\n" "$year" "$salary"
 
@@ -78,8 +78,6 @@ do
 		# Increment year everytime for regular employee
 		year=$((year + 1))
 	fi
-
-	increment_number=$((increment_number + 1))
 done
 
 echo
