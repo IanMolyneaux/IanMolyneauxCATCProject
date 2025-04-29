@@ -56,7 +56,6 @@ until [[ "$again" == "no" || "$again" == "n" ]]; do
 	# Loop for salary scale calculation
 	salary=$starting_salary
 	year=$current_year
-	increment_number=1
 
 	echo
 	printf "%-10s | %-15s\n" "Year" "Salary (€)"   
