@@ -47,6 +47,7 @@ do
 	printf "%-10s | %-15s\n" "$year" "$salary"
 
 	# Increase salary
+	last_salary=$salary
 	salary=$((salary + salary_increment))
 
 	# Advance year based on manager status
@@ -69,5 +70,5 @@ echo " Salary scale generation completed"
 echo ""
 echo " Increments applied: $number_of_points"
 echo ""
-echo " Final salary: \$$(printf "%'.2f" $salary)"
+echo " Final salary: \$$(printf "%'.2f" $last_salary)"
 echo "-------------------------------------------"
