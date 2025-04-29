@@ -64,6 +64,10 @@ do
 done
 
 echo
-echo "--------------------------------------"
+echo "-------------------------------------------"
 echo " Salary scale generation completed"
-echo "--------------------------------------"
+echo ""
+echo " Increments applied: $number_of_points"
+echo ""
+echo " Final salary: \$$(printf "%'.2f" $salary)"
+echo "-------------------------------------------"
