@@ -5,12 +5,6 @@
 # Date: 28/04/2025
 # Description: Generate a salary scale based on user input
 
-#Welcome message
-echo "---------------------------------------"
-echo " Welcome to the Salary Scale Generator "
-echo "---------------------------------------"
-echo
-
 # Input validation function for numbers
 get_number_input() {
 	local prompt="$1"
@@ -28,76 +22,82 @@ get_number_input() {
 	done
 }
 
-# Get validated inputs for numeric inputs
-# User input Starting Salary
-starting_salary=$(get_number_input "Enter starting salary: ")
-echo "Starting Salary: $starting_salary"
+again=""
 
-# User input Salary Point
-number_of_points=$(get_number_input "Enter number of points on salary scale: ")
-echo "Number of Points: $number_of_points"
+until [[ "$again" == "no" || "$again" == "n" ]] do
 
-# User input Salary Increment
-salary_increment=$(get_number_input "Enter salary increment: ")
-echo "Salary Increment: $salary_increment"
+	#Welcome message
+	echo "---------------------------------------"
+	echo " Welcome to the Salary Scale Generator "
+	echo "---------------------------------------"
+	echo
 
-# Check if employee is a Manager
-echo "Is the employee a manager? (yes/no):"
-read is_manager
-is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
+	# Get validated inputs for numeric inputs
+	# User input Starting Salary
+	starting_salary=$(get_number_input "Enter starting salary: ")
+	echo "Starting Salary: $starting_salary"
 
-# Getting the current year
-current_year=$(date +%Y)
+	# User input Salary Point
+	number_of_points=$(get_number_input "Enter number of points on salary scale: ")
+	echo "Number of Points: $number_of_points"
 
-# Loop for salary scale calculation
-salary=$starting_salary
-year=$current_year
-increment_number=1
+	# User input Salary Increment
+	salary_increment=$(get_number_input "Enter salary increment: ")
+	echo "Salary Increment: $salary_increment"
 
-echo
-printf "%-10s | %-15s\n" "Year" "Salary (€)"   
-echo "-------------------------------------"
+	# Check if employee is a Manager
+	echo "Is the employee a manager? (yes/no):"
+	read is_manager
+	is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
 
-for increment_number in $(seq 1 $number_of_points)
-do
-	printf "%-10s | €%'14.2f\n" "$year" "$salary"
+	# Getting the current year
+	current_year=$(date +%Y)
 
-	# Store last salary for final summary
-	last_salary=$salary
+	# Loop for salary scale calculation
+	salary=$starting_salary
+	year=$current_year
+	increment_number=1
 
-	# Increase salary
-	salary=$((salary + salary_increment))
+	echo
+	printf "%-10s | %-15s\n" "Year" "Salary (€)"   
+	echo "-------------------------------------"
 
-	# Advance year based on manager status
-	if [ "$is_manager" = "yes" ]; then
-		# Two increments per year
-		if [ $((increment_number % 2)) -eq 0 ]; then
+	for increment_number in $(seq 1 $number_of_points)
+	do
+		printf "%-10s | €%'14.2f\n" "$year" "$salary"
+
+		# Store last salary for final summary
+		last_salary=$salary
+	
+		# Increase salary
+		salary=$((salary + salary_increment))
+
+		# Advance year based on manager status
+		if [ "$is_manager" = "yes" ]; then
+			# Two increments per year
+			if [ $((increment_number % 2)) -eq 0 ]; then
+				year=$((year + 1))
+			fi
+		else
+			# Increment year everytime for regular employee
 			year=$((year + 1))
 		fi
-	else
-		# Increment year everytime for regular employee
-		year=$((year + 1))
-	fi
+	done
+	
+	echo
+	echo "-------------------------------------------"
+	echo " Salary scale generation completed"
+	echo ""
+	echo " Increments applied: $number_of_points"
+	echo ""
+	echo " Final salary: €$(printf "%'.2f" $last_salary)"
+	echo "-------------------------------------------"
+
+	# Ask user if they want to run it again
+	echo
+	read -p "Would you like to generate another salary scale? (yes/no): " again
+	again=$(echo "$again" | tr '[:upper:]' '[:lower:]')
 done
 
-echo
-echo "-------------------------------------------"
-echo " Salary scale generation completed"
-echo ""
-echo " Increments applied: $number_of_points"
-echo ""
-echo " Final salary: €$(printf "%'.2f" $last_salary)"
-echo "-------------------------------------------"
-
-# Loop Generator
-echo
-read -p "Would you like to generate another salary scale? (yes/no): " again
-again=$(echo "$again" | tr '[:upper:]' '[:lower:]')
-
-if [[ "$again" == "yes" || "$again" == "y" ]]; then
-	echo
-	exec "$0"
-else
-	echo "Goodbye!"
-	exit 0
-fi
+echo "Goodbye!"
+exit 0
