@@ -28,6 +28,7 @@ echo "Salary Increment: $salary_increment"
 # Check if employee is a Manager
 echo "Is the employee a manager? (yes/no):"
 read is_manager
+is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
 
 #if "yes", double increment of salary per year
 if [ "$is_manager" = "yes" ]; then
