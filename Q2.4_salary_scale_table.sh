@@ -5,7 +5,7 @@
 # Date: 28/04/2025
 # Description: Generate a salary scale based on user input
 
-# Input validation function for numbers
+# Input validation function for numeric values
 get_number_input() {
 	local prompt="$1"
 	local input
@@ -22,6 +22,7 @@ get_number_input() {
 	done
 }
 
+# Wrapped generator in a rerun loop
 again=""
 
 until [[ "$again" == "no" || "$again" == "n" ]]; do
@@ -32,7 +33,6 @@ until [[ "$again" == "no" || "$again" == "n" ]]; do
 	echo "----------------------------------------"
 	echo
 
-	# Get validated inputs for numeric inputs
 	# User input Starting Salary
 	starting_salary=$(get_number_input "Enter starting salary: ")
 	echo "Starting Salary: $starting_salary"
@@ -48,15 +48,17 @@ until [[ "$again" == "no" || "$again" == "n" ]]; do
 	# Check if employee is a Manager
 	echo "Is the employee a manager? (yes/no):"
 	read is_manager
-	is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]') #user input is not case sensitive
+	# Ensures input here is not case sensitive
+	is_manager=$(echo "$is_manager" | tr '[:upper:]' '[:lower:]')
 
-	# Getting the current year
+	# Getting the current year as starting point for Salary
 	current_year=$(date +%Y)
 
 	# Loop for salary scale calculation
 	salary=$starting_salary
 	year=$current_year
 
+	# Table header dividing year and salary
 	echo
 	printf "%-10s | %-15s\n" "Year" "Salary (€)"   
 	echo "----------------------------------------"
@@ -83,6 +85,7 @@ until [[ "$again" == "no" || "$again" == "n" ]]; do
 		fi
 	done
 	
+	# Summary of calculation
 	echo
 	echo "----------------------------------------"
 	echo " Salary scale generation completed"
