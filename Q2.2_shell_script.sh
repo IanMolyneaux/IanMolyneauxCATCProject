@@ -53,5 +53,5 @@ echo "" >> "$outfile"
 
 # Command History
 echo "===== Command History =====" >> "$outfile"
-history >> "$outfile"
+head -n 107 ~/.bash_history >> "$outfile"
 echo "" >> "$outfile"
