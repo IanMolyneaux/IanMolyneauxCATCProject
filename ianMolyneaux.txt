@@ -1,5 +1,5 @@
 ===== Current Date and Time =====
-Sun Apr 27 19:21:10 UTC 2025
+Sun May  4 12:32:25 UTC 2025
 
 ===== Hostname =====
 IanMolyneauxCATC
@@ -11,52 +11,52 @@ x86_64
 Linux IanMolyneauxCATC 6.8.0-1021-azure #25-Ubuntu SMP Wed Jan 15 20:45:09 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
 
 ===== System Uptime =====
- 19:21:10 up  6:17,  1 user,  load average: 0.00, 0.00, 0.00
+ 12:32:25 up 6 days, 23:28,  1 user,  load average: 0.00, 0.00, 0.00
 
 ===== Current User =====
 ianmolyneaux
 
 ===== Who is logged in =====
-ianmolyneaux pts/1        2025-04-27 13:28 (51.186.74.25)
+ianmolyneaux pts/0        2025-05-04 12:26 (51.186.74.25)
 
 ===== Current Activity =====
- 19:21:10 up  6:17,  1 user,  load average: 0.00, 0.00, 0.00
+ 12:32:25 up 6 days, 23:28,  1 user,  load average: 0.00, 0.00, 0.00
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
-ianmolyn          51.186.74.25     13:28    5:53m  0.00s  0.01s sshd: ianmolyneaux [priv]
+ianmolyn          51.186.74.25     12:26   20:37m  0.00s  0.02s sshd: ianmolyneaux [priv]
 
 ===== Table of Processes =====
-top - 19:21:11 up  6:17,  1 user,  load average: 0.00, 0.00, 0.00
-Tasks: 112 total,   1 running, 111 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  0.0 us,  9.1 sy,  0.0 ni, 90.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
-MiB Mem :    842.8 total,    212.3 free,    379.9 used,    397.8 buff/cache     
-MiB Swap:      0.0 total,      0.0 free,      0.0 used.    462.9 avail Mem 
+top - 12:32:25 up 6 days, 23:28,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 106 total,   1 running, 105 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :    842.8 total,    141.0 free,    380.4 used,    488.4 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    462.4 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
-      1 root      20   0   22804  14080   9728 S   0.0   1.6   0:03.71 systemd
-      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      1 root      20   0   22672  14080   9728 S   0.0   1.6   0:21.66 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.06 kthreadd
       3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
       4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
       5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
       6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
       7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      9 root       0 -20       0      0      0 I   0.0   0.0   0:00.13 kworker+
+      9 root       0 -20       0      0      0 I   0.0   0.0   0:03.21 kworker+
      12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
      14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
-     15 root      20   0       0      0      0 S   0.0   0.0   0:00.39 ksoftir+
-     16 root      20   0       0      0      0 I   0.0   0.0   0:00.56 rcu_sch+
-     17 root      rt   0       0      0      0 S   0.0   0.0   0:00.12 migrati+
+     15 root      20   0       0      0      0 S   0.0   0.0   0:10.23 ksoftir+
+     16 root      20   0       0      0      0 I   0.0   0.0   0:12.65 rcu_sch+
+     17 root      rt   0       0      0      0 S   0.0   0.0   0:03.36 migrati+
      18 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
      19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
      20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmp+
      21 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      23 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd
-     24 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungta+
+     24 root      20   0       0      0      0 S   0.0   0.0   0:00.16 khungta+
      25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_rea+
      27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     28 root      20   0       0      0      0 S   0.0   0.0   0:00.85 kcompac+
+     28 root      20   0       0      0      0 S   0.0   0.0   0:22.98 kcompac+
      29 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
-     30 root      39  19       0      0      0 S   0.0   0.0   0:00.22 khugepa+
+     30 root      39  19       0      0      0 S   0.0   0.0   0:06.84 khugepa+
      31 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      32 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      33 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
@@ -73,11 +73,11 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.    462.9 avail Mem
      44 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      45 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdo+
      46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     47 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kswapd0
+     47 root      20   0       0      0      0 S   0.0   0.0   0:01.02 kswapd0
      48 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptf+
      49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     51 root      20   0       0      0      0 S   0.0   0.0   0:03.19 hwrng
+     51 root      20   0       0      0      0 S   0.0   0.0   1:29.20 hwrng
      52 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh+
      53 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      54 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh+
@@ -88,10 +88,10 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.    462.9 avail Mem
      59 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      62 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      63 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     64 root      20   0       0      0      0 S   0.0   0.0   0:00.54 hv_ball+
+     64 root      20   0       0      0      0 S   0.0   0.0   0:14.99 hv_ball+
      71 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
      73 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     87 root      20   0       0      0      0 S   0.0   0.0   0:00.16 jbd2/sd+
+     87 root      20   0       0      0      0 S   0.0   0.0   0:02.96 jbd2/sd+
      88 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
     149 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
     150 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
@@ -100,50 +100,151 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.    462.9 avail Mem
     399 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
     686 root      20   0       0      0      0 S   0.0   0.0   0:00.00 jbd2/sd+
     687 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-    734 message+  20   0    9880   5632   4736 S   0.0   0.7   0:00.33 dbus-da+
-    739 root      20   0   32408  20608  10368 S   0.0   2.4   0:00.11 network+
-    754 root      20   0   17976   8832   7808 S   0.0   1.0   0:00.14 systemd+
-    809 root      20   0    7224   2816   2560 S   0.0   0.3   0:00.05 cron
-    828 root      20   0  109996  22656  13184 S   0.0   2.6   0:00.09 unatten+
+    734 message+  20   0    9972   5632   4608 S   0.0   0.7   0:13.54 dbus-da+
+    739 root      20   0   32408  20480  10240 S   0.0   2.4   0:00.11 network+
+    754 root      20   0   18192   8832   7808 S   0.0   1.0   0:01.58 systemd+
+    809 root      20   0    7224   2816   2560 S   0.0   0.3   0:01.35 cron
+    828 root      20   0  109996  22400  12928 S   0.0   2.6   0:00.09 unatten+
     907 root      20   0    6148   2176   2048 S   0.0   0.3   0:00.00 agetty
     960 root      20   0    6104   2048   1920 S   0.0   0.2   0:00.18 agetty
     997 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-   1553 root      20   0   14740   8180   6528 S   0.0   0.9   0:00.01 sshd
-   1557 ianmoly+  20   0   20392  11648   9472 S   0.0   1.3   0:00.17 systemd
-   1558 ianmoly+  20   0   21148   3520   1792 S   0.0   0.4   0:00.00 (sd-pam)
-   1686 ianmoly+  20   0   14964   7076   5120 S   0.0   0.8   0:01.61 sshd
-   1688 ianmoly+  20   0   10348   6528   3712 S   0.0   0.8   0:00.42 bash
-   1840 root      19  -1   50332  15360  14336 S   0.0   1.8   0:00.29 systemd+
-   1841 root      rt   0  223584  27264   8704 S   0.0   3.2   0:01.78 multipa+
-   1843 systemd+  20   0   18984   9600   8448 S   0.0   1.1   0:00.07 systemd+
-   1848 polkitd   20   0  308160   8064   7168 S   0.0   0.9   0:00.62 polkitd
-   1854 systemd+  20   0   21584  13184  10880 S   0.0   1.5   0:00.14 systemd+
-   1856 root      20   0   24916   6784   5120 S   0.0   0.8   0:00.08 systemd+
-   1859 root      20   0  469076  13824  11520 S   0.0   1.6   0:00.09 udisksd
-   1861 root      20   0   43984  35740  12288 S   0.0   4.1   0:00.48 python3
-   1885 _chrony   20   0   11204   3616   2944 S   0.0   0.4   0:09.32 chronyd
+   1885 _chrony   20   0   11204   3616   2944 S   0.0   0.4   4:21.98 chronyd
    1887 _chrony   20   0   11072   1204    640 S   0.0   0.1   0:00.00 chronyd
-   1902 root      20   0  392024  12800  10752 S   0.0   1.5   0:00.08 ModemMa+
-   1921 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
-   1932 syslog    20   0  222508   5504   4608 S   0.0   0.6   0:00.08 rsyslogd
-   1964 root      20   0  411944  35768  12800 S   0.0   4.1   0:18.23 python3
-   2174 root      20   0   12020   8192   7168 S   0.0   0.9   0:00.07 sshd
-   2623 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
-   2636 root      20   0    3712   2560   1920 S   0.0   0.3   0:05.53 hv_kvp_+
-   2758 root      20   0  652540  53656  36268 S   0.0   6.2   0:02.64 fwupd
-   2784 root      20   0   81808   3000   2688 S   0.0   0.3   0:00.00 gpg-age+
-   3251 root      20   0       0      0      0 I   0.0   0.0   0:02.01 kworker+
-   3700 root      20   0       0      0      0 I   0.0   0.0   0:01.80 kworker+
-   3968 root      20   0       0      0      0 I   0.0   0.0   0:00.22 kworker+
-   4102 root      20   0       0      0      0 I   0.0   0.0   0:00.13 kworker+
-   4210 root      20   0       0      0      0 I   0.0   0.0   0:00.05 kworker+
-   4288 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
-   4335 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
-   4336 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
-   4348 root      20   0   12148   5236   4096 S   0.0   0.6   0:00.00 sshd
-   4349 sshd      20   0   12148   6140   4992 S   0.0   0.7   0:00.00 sshd
-   4350 ianmoly+  20   0    7740   3584   3328 S   0.0   0.4   0:00.00 Q2.2_sh+
-   4359 ianmoly+  20   0   12360   5376   3328 R   0.0   0.6   0:00.00 top
+   8375 root      20   0    3712   2560   1920 S   0.0   0.3   2:30.93 hv_kvp_+
+  13521 root      19  -1   99736  62208  61184 S   0.0   7.2   0:15.25 systemd+
+  13522 polkitd   20   0  308164   7808   6912 S   0.0   0.9   0:14.38 polkitd
+  13525 root      rt   0  223584  27264   8704 S   0.0   3.2   0:44.70 multipa+
+  13528 systemd+  20   0   21580  13184  10880 S   0.0   1.5   0:00.95 systemd+
+  13538 root      20   0   24916   5760   4096 S   0.0   0.7   0:00.63 systemd+
+  13540 root      20   0   43960  35932  12288 S   0.0   4.2   0:00.53 python3
+  13544 root      20   0  469176  11648   9344 S   0.0   1.3   0:05.30 udisksd
+  13589 root      20   0  392024  10112   8064 S   0.0   1.2   0:00.18 ModemMa+
+  13599 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+  13600 systemd+  20   0   18984   8576   7424 S   0.0   1.0   0:00.60 systemd+
+  13607 syslog    20   0  222508   5376   4224 S   0.0   0.6   0:02.65 rsyslogd
+  13673 root      20   0  411948  36676  12672 S   0.0   4.2   7:39.07 python3
+  14173 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+  14631 root      20   0   12020   8064   7040 S   0.0   0.9   0:11.38 sshd
+  71112 root      20   0       0      0      0 I   0.0   0.0   0:00.73 kworker+
+  71629 root      20   0       0      0      0 I   0.0   0.0   0:00.21 kworker+
+  71773 root      20   0       0      0      0 I   0.0   0.0   0:02.04 kworker+
+  71798 root      20   0       0      0      0 I   0.0   0.0   0:00.41 kworker+
+  72206 root      20   0       0      0      0 I   0.0   0.0   0:00.24 kworker+
+  72282 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker+
+  72325 root      20   0   14740  10496   8832 S   0.0   1.2   0:00.02 sshd
+  72329 ianmoly+  20   0   20196  11392   9472 S   0.0   1.3   0:00.17 systemd
+  72331 ianmoly+  20   0   21144   3516   1792 S   0.0   0.4   0:00.00 (sd-pam)
+  72459 ianmoly+  20   0   14968   6948   5120 S   0.0   0.8   0:00.02 sshd
+  72462 ianmoly+  20   0    9192   5504   3712 S   0.0   0.6   0:00.04 bash
+  72545 ianmoly+  20   0    7740   3456   3200 S   0.0   0.4   0:00.00 Q2.2_sh+
+  72554 ianmoly+  20   0   12360   5376   3328 R   0.0   0.6   0:00.00 top
 
 ===== Command History =====
+ls
+mkdir Music
+mkdir Movies
+mkdir Documents
+ls
+cd Music/
+ls
+mkdir SleepToken
+ls
+cd SleepToken/
+mkdir TakeMeBackToEden
+ls
+cd TakeMeBackToEden/
+..
+cd ..
+tree
+sudo apt install tree
+sudo apt update
+sudo apt install tree
+tree
+cd ..
+ls
+cd ..
+ls
+cd ianmolyneaux
+cd usr
+ls
+cd ..
+cd ~
+ls
+cd Music
+cd SleepToken
+ls
+mkdir ThisPlaceWillBecomeYourTomb
+ls
+mkdir Sundowning
+ls
+cd ..
+las
+ls
+mkdir LornaShore
+ls
+cd LornaShore/
+mkdir PainRemains
+mkdir Immortal
+mkdir FleshCoffin
+mkdir Psalms
+ls
+cd..
+cd ..
+ls
+mkdir Periphery
+cd Periphery/
+mkdir PeripheryVDjentIsNotAGenre
+mkdir PeripheryIVHailStan
+mkdir PeripheryIIISelectDifficulty
+mkdir PeripheryII
+mkdir Periphery
+ls
+cd ..
+ls
+cd Music
+tree
+cd ..
+tree
+git clone https://PAT@ghp_jjjkABcqpaiAgCeVU5GzgmEgWN8A152fhS53github.com/IanMolyneaux/IanMolyneauxCATCProject.git
+git clone https://ghp_jjjkABcqpaiAgCeVU5GzgmEgWN8A152fhS53@github.com/IanMolyneaux/IanMolyneauxCATCProject.git
+git clone https://github.com/IanMolyneaux/IanMolyneauxCATCProject.git
+git clone https://ghp_jjjkABcqpaiAgCeVU5GzgmEgWN8A152fhS53@github.com/IanMolyneaux/IanMolyneauxCATCProject.git
+git clone https://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@github.com/IanMolyneaux/IanMolyneauxCATCProject.git
+ls
+cd IanMolyneauxCATCProject/
+ls
+git config --global user.name "IanMolyneaux"
+git config --global user.name
+git config --global user.email "ianmolyneaux92@gmail.com"
+git congig --global user.email
+git config --global user.email
+echo hello world
+passwd
+passwd root
+date
+hostname
+arch
+uname -a
+dmesg | more
+sudo dmesg | more
+uptime
+whoami
+who
+last
+w
+top
+echo $SHELL
+echo {con, pre} {sent, fer} {s, ed}
+ls
+man ls
+man who
+clear
+cal 2000
+cal 9 1752
+sudo apt install ncal
+cal 2000
+cal 9 1752
+yes please
+time sleep 5
+history
 
